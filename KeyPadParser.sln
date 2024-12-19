@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyPadParser", "KeyPadParser\KeyPadParser.csproj", "{F080F6B2-0261-4063-B4CC-733C113B690E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{589373AC-4439-4644-A823-2C4951219AAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F080F6B2-0261-4063-B4CC-733C113B690E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F080F6B2-0261-4063-B4CC-733C113B690E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F080F6B2-0261-4063-B4CC-733C113B690E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F080F6B2-0261-4063-B4CC-733C113B690E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{589373AC-4439-4644-A823-2C4951219AAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{589373AC-4439-4644-A823-2C4951219AAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{589373AC-4439-4644-A823-2C4951219AAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{589373AC-4439-4644-A823-2C4951219AAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
