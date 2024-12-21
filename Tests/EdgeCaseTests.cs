@@ -3,6 +3,7 @@ using NUnit.Framework;
 namespace Tests
 {
     [TestFixture]
+    [Category("EdgeCaseTests")]
     public class OldPhonePadEdgeCaseTests
     {
         [Test]

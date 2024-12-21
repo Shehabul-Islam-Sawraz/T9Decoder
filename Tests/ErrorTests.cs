@@ -4,6 +4,7 @@ using NUnit.Framework;
 namespace Tests
 {
     [TestFixture]
+    [Category("ErrorTests")]
     public class OldPhonePadErrorTests
     {
         [TestCase("")]

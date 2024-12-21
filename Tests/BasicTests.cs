@@ -3,6 +3,7 @@ using NUnit.Framework;
 namespace Tests
 {
     [TestFixture]
+    [Category("BasicTests")]
     public class OldPhonePadBasicTests
     {
         [TestCase("33#", "E")]
@@ -22,7 +23,7 @@ namespace Tests
         public void ProcessInput_WithBackspace_HandlesCorrectly()
         {
             // Arrange
-            var input = "4433*33555 555666#"; // HELLO with a mistake and backspace
+            var input = "4433*33555 555666#"; // HELLO with a backspace
 
             // Act
             var result = KeyPadParser.OldPhonePad.ProcessInput(input);
@@ -68,6 +69,19 @@ namespace Tests
 
             // Assert
             Assert.That(result, Is.EqualTo("A"));
+        }
+
+        [Test]
+        public void ProcessInput_SpecialCharacters_HandlesCorrectly()
+        {
+            // Arrange
+            var input = "1 11 111 111 * 0#";
+
+            // Act
+            var result = KeyPadParser.OldPhonePad.ProcessInput(input);
+
+            // Assert
+            Assert.That(result, Is.EqualTo("&'( "));
         }
     }
 }
