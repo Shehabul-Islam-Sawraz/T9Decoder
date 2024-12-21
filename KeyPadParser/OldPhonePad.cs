@@ -21,7 +21,7 @@ namespace KeyPadParser
             InputProcessor.ValidateInput(input);
 
             var result = new StringBuilder();
-            KeypadInput currentInput = null;
+            KeypadInput? currentInput = null;
 
             for (int i = 0; i < input.Length; i++)
             {
