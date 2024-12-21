@@ -60,6 +60,78 @@ dotnet test Tests --filter TestCategory=ErrorTests
 #: [send]
 ```
 
+## API Documentation
+
+### OldPhonePad Class
+```csharp
+public class OldPhonePad
+{
+    public static string ProcessInput(string input)
+}
+```
+Main class responsible for converting keypad inputs to text.
+- **ProcessInput**: Converts a sequence of keypad inputs into text
+  - Parameters: `input` (string) - The keypad input sequence
+  - Returns: The decoded text message
+  - Throws: `ArgumentException` for invalid inputs
+
+### KeypadInput Class
+```csharp
+public class KeypadInput
+{
+    public char Key { get; }
+    public int PressCount { get; private set; }
+    
+    public void IncrementPressCount()
+    public void Reset()
+}
+```
+Represents a single keypad input with its press count.
+- **IncrementPressCount**: Increases the press count for repeated key presses
+- **Reset**: Resets the press count to 1
+
+### InputProcessor Class
+```csharp
+public class InputProcessor
+{
+    public static char ProcessKeyPress(KeypadInput input)
+    public static void ValidateInput(string input)
+}
+```
+Handles input validation and processing.
+- **ProcessKeyPress**: Converts a keypad input into its corresponding character
+- **ValidateInput**: Validates the input string for basic requirements
+
+### KeypadConfiguration Class
+```csharp
+public static class KeypadConfiguration
+{
+    public static readonly IReadOnlyDictionary<char, string> KeyMappings
+}
+```
+Provides configuration for keypad mappings.
+- **KeyMappings**: Read-only dictionary mapping keys to their characters
+
+## Flow Diagrams
+
+### Input Processing Flow
+```
+[User Input] → [Input Validation] → [Process Each Key]
+                                        ↓
+           [Handle Backspace] ← [Current Input] → [Process Character]
+                                        ↓
+                                  [Final Output]
+```
+
+### Key Press Processing Flow
+```
+[Key Press] → [Same as Previous?] → [Yes] → [Increment Count]
+                     ↓
+                    [No]
+                     ↓
+            [Process Previous] → [Start New Input]
+```
+
 ## Usage
 
 ```csharp

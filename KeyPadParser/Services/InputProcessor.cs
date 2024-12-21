@@ -34,7 +34,7 @@ namespace KeyPadParser.Services
                 throw new ArgumentException("Input cannot be null or empty.", nameof(input));
             }
 
-            if (!input.EndsWith("#"))
+            if (!input.EndsWith('#'))
             {
                 throw new ArgumentException("Input must end with the send key (#).", nameof(input));
             }
